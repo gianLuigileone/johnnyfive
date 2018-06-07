@@ -1,0 +1,112 @@
+\hypertarget{class_servo_loop}{}\section{Servo\+Loop Class Reference}
+\label{class_servo_loop}\index{Servo\+Loop@{Servo\+Loop}}
+
+
+{\ttfamily \#include $<$servo.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servo_loop_ac8638cbe2711a19e66747a4382d68e6a}{Servo\+Loop}} (int pgain, int dgain)
+\item 
+void \mbox{\hyperlink{class_servo_loop_af79e31631439df5f5cc4746dca6e50d9}{update}} (int error)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_servo_loop_adfbfae169a73a548ca3963c9099998d9}{move\+Servo}} (int channel, int position, int speed=0, int time=0)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_servo_loop_ad740330c60ab6aa9b089414578862845}{m\+\_\+pos}}
+\item 
+int \mbox{\hyperlink{class_servo_loop_ac7999e3741b4ede946a41f512002ca92}{m\+\_\+prev\+Error}}
+\item 
+int \mbox{\hyperlink{class_servo_loop_a71e1790cb21e702d4b9be75085c684aa}{m\+\_\+pgain}}
+\item 
+int \mbox{\hyperlink{class_servo_loop_a6268eda0c0cf2f24700c29e24318f319}{m\+\_\+dgain}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Modella un generico servo motore  \mbox{\hyperlink{class_servo_loop}{Servo\+Loop}} 
+\begin{DoxyParams}{Parameters}
+{\em pgain} & valore del guadagno proporzionale sull\textquotesingle{}errore di posizione \\
+\hline
+{\em dgain} & valore del guadagno differenziale sull\textquotesingle{}errore di posizione \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_servo_loop_ac8638cbe2711a19e66747a4382d68e6a}\label{class_servo_loop_ac8638cbe2711a19e66747a4382d68e6a}} 
+\index{Servo\+Loop@{Servo\+Loop}!Servo\+Loop@{Servo\+Loop}}
+\index{Servo\+Loop@{Servo\+Loop}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{Servo\+Loop()}{ServoLoop()}}
+{\footnotesize\ttfamily Servo\+Loop\+::\+Servo\+Loop (\begin{DoxyParamCaption}\item[{int}]{pgain,  }\item[{int}]{dgain }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_servo_loop_adfbfae169a73a548ca3963c9099998d9}\label{class_servo_loop_adfbfae169a73a548ca3963c9099998d9}} 
+\index{Servo\+Loop@{Servo\+Loop}!move\+Servo@{move\+Servo}}
+\index{move\+Servo@{move\+Servo}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{move\+Servo()}{moveServo()}}
+{\footnotesize\ttfamily void Servo\+Loop\+::move\+Servo (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{int}]{position,  }\item[{int}]{speed = {\ttfamily 0},  }\item[{int}]{time = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Muove il servo motore nella posizione specificata  move\+Servo 
+\begin{DoxyParams}{Parameters}
+{\em channel} & numero del canale a cui è collegato il motore \\
+\hline
+{\em position} & la posizione in cui si vuole portare il motore \\
+\hline
+{\em speed} & velocità con cui muovere il motore \\
+\hline
+{\em time} & tempo che il motore impiegherà a portarsi in quella posizione \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_servo_loop_af79e31631439df5f5cc4746dca6e50d9}\label{class_servo_loop_af79e31631439df5f5cc4746dca6e50d9}} 
+\index{Servo\+Loop@{Servo\+Loop}!update@{update}}
+\index{update@{update}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Servo\+Loop\+::update (\begin{DoxyParamCaption}\item[{int}]{error }\end{DoxyParamCaption})}
+
+Calcola la nuova posizione del motore in funzione dell\textquotesingle{}errore di posizione.  update 
+\begin{DoxyParams}{Parameters}
+{\em error} & differenza tra il valore della posizione di riferimento ed il valore misurato \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_servo_loop_a6268eda0c0cf2f24700c29e24318f319}\label{class_servo_loop_a6268eda0c0cf2f24700c29e24318f319}} 
+\index{Servo\+Loop@{Servo\+Loop}!m\+\_\+dgain@{m\+\_\+dgain}}
+\index{m\+\_\+dgain@{m\+\_\+dgain}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{m\+\_\+dgain}{m\_dgain}}
+{\footnotesize\ttfamily int Servo\+Loop\+::m\+\_\+dgain}
+
+\mbox{\Hypertarget{class_servo_loop_a71e1790cb21e702d4b9be75085c684aa}\label{class_servo_loop_a71e1790cb21e702d4b9be75085c684aa}} 
+\index{Servo\+Loop@{Servo\+Loop}!m\+\_\+pgain@{m\+\_\+pgain}}
+\index{m\+\_\+pgain@{m\+\_\+pgain}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{m\+\_\+pgain}{m\_pgain}}
+{\footnotesize\ttfamily int Servo\+Loop\+::m\+\_\+pgain}
+
+\mbox{\Hypertarget{class_servo_loop_ad740330c60ab6aa9b089414578862845}\label{class_servo_loop_ad740330c60ab6aa9b089414578862845}} 
+\index{Servo\+Loop@{Servo\+Loop}!m\+\_\+pos@{m\+\_\+pos}}
+\index{m\+\_\+pos@{m\+\_\+pos}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{m\+\_\+pos}{m\_pos}}
+{\footnotesize\ttfamily int Servo\+Loop\+::m\+\_\+pos}
+
+\mbox{\Hypertarget{class_servo_loop_ac7999e3741b4ede946a41f512002ca92}\label{class_servo_loop_ac7999e3741b4ede946a41f512002ca92}} 
+\index{Servo\+Loop@{Servo\+Loop}!m\+\_\+prev\+Error@{m\+\_\+prev\+Error}}
+\index{m\+\_\+prev\+Error@{m\+\_\+prev\+Error}!Servo\+Loop@{Servo\+Loop}}
+\subsubsection{\texorpdfstring{m\+\_\+prev\+Error}{m\_prevError}}
+{\footnotesize\ttfamily int Servo\+Loop\+::m\+\_\+prev\+Error}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{servo_8h}{servo.\+h}}\item 
+src/\mbox{\hyperlink{servo_8cpp}{servo.\+cpp}}\end{DoxyCompactItemize}
